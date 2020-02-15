@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 
 app.use(require('./middleware/headers'))
 
-app.use('/test', test)
+// app.use('/test', test)
 
 app.use('/api/user', user)
 app.use('/api/login', login)
