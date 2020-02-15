@@ -2,7 +2,7 @@ require('dotenv').config()
 
 var express = require('express');
 var app = express()
-var test = require('./controllers/testcontrollers')
+// var test = require('./controllers/testcontrollers')
 var user = require('./controllers/usercontroller')
 var sequelize = require('./db')
 var bodyParser = require('body-parser')
@@ -36,6 +36,6 @@ app.listen(process.env.PORT, function (){
     console.log(`Server is working on ${process.env.PORT}`)
 })
 
-app.use('/api/test', function(req, res){
-    res.send("This is data from the /api/test endpoint. It's from the server")
-})
+// app.use('/api/test', function(req, res){
+//     res.send("This is data from the /api/test endpoint. It's from the server")
+// })
