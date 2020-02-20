@@ -29,6 +29,7 @@ app.use('/api/tablelog', tablelog)
 app.use('/api/sponslog', sponslog)
 
 
+
 //could be written as follows also
 //app.use('/api/user', require('./controllers/usercontroller'))
 

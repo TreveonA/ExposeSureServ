@@ -14,13 +14,25 @@ router.post('/', function (req, res) {
 
 })
 
+router.get("/getall", function (req, res) {
+    //grabbing all of the Grocery List items from data
+    //database for a given user
+    var userid = req.user.id
+    AdLogModelReadOnly.findAll()
+    .then(
+        function findAllSuccess(data) {
+            res.json(data)
+        }, function findAll(err) {
+            res.send(500, err.message)
+        })
+})
+
 router.get("/", function (req, res) {
     //grabbing all of the Grocery List items from data
     //database for a given user
     var userid = req.user.id
-    AdLogModelReadOnly.findAll({
-        where: { }
-    }).then(
+    AdLogModelReadOnly.findAll()
+    .then(
         function findAllSuccess(data) {
             res.json(data)
         }, function findAll(err) {

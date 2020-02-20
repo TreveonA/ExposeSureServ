@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
     return sequelize.define('adlogreadonly',{
 
-        location: DataTypes.STRING,
+        opportunity: DataTypes.STRING,
         size: DataTypes.STRING,
         duration: DataTypes.STRING,
         contact: DataTypes.STRING,
