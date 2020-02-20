@@ -12,7 +12,7 @@ var tablelog = require('./controllers/tablelogcontroller')
 var sponslog = require('./controllers/sponslogcontroller')
 
 sequelize.sync()
-
+//comment to change things
 app.use(bodyParser.json())
 
 app.use(require('./middleware/headers'))
